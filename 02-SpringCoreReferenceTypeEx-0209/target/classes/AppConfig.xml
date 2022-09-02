@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="repo" class="in.akash.repo.UserRepo">
+    	<property name="name">
+    		<value>Akash</value>
+    	</property>
+    	<property name="email">
+    		<value>javabyakash@gmail.com</value>
+    	</property>
+    	<property name="mobile">
+    		<value>7774949414</value>
+    	</property>
+    </bean>
+    
+    <bean id="service" class="in.akash.service.UserService">
+    	<property name="userRepo">
+    		<ref bean="repo"/>
+    	</property>
+    </bean>
+    
+    <bean id="controller" class="in.akash.controller.UserController">
+    	<property name="userService">
+    		<ref bean="service"/>
+    	</property>
+    </bean>
+
+</beans>
