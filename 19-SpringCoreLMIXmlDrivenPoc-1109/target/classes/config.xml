@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="address" class="in.javabyakash.bean.Address"
+		scope="prototype">
+		<property name="city">
+			<value>Khamgaon</value>
+		</property>
+		<property name="pinCode">
+			<value>444303</value>
+		</property>
+	</bean>
+	
+	<bean id="employee" class="in.javabyakash.bean.Employee" scope="singleton">
+		<property name="address">
+			<ref bean="address"/>
+		</property>
+		
+		<lookup-method name="getMyAddrs" bean="address"/>
+	</bean>
+
+</beans>
