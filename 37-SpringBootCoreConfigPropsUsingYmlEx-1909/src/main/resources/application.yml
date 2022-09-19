@@ -1,0 +1,24 @@
+my:
+  app:
+    id: 101
+    code: ABC
+    active: true
+    
+    listData:
+    - A
+    - B
+    - C
+    
+    setData:
+    - P
+    - Q
+    - R
+    
+    mapData:
+       M1: C1
+       M2: C2
+    
+    pob:
+       pid: 201
+       pname: XYZ
+    
