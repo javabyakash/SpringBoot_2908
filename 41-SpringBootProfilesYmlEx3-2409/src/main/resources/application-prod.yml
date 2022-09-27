@@ -1,0 +1,7 @@
+my:
+   app:
+      driver: oracle.jdbc
+      url: jdbc:oracle
+      username: scott
+      password: tiger
+         

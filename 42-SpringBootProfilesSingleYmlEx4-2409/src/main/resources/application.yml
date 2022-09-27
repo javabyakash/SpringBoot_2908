@@ -1,0 +1,35 @@
+my:
+   app:
+      driver: mysql.jdbc
+      url: jdbc:mysql
+      username: root
+      password: root
+      
+---
+spring: 
+   profiles:
+   - qa
+   - uat
+   
+my:
+   app:
+      driver: pgsql.jdbc
+      url: jdbc:pgsql
+      username: admin
+      password: admin
+      
+---
+#we can use this below format to define profile
+#spring:   #profiles: prod
+   
+#or
+
+#we can also folow below format
+spring:  config:    activate:      on-profile: prod
+   
+my: 
+   app:
+      driver: oracle.jdbc
+      url: jdbc:oracle
+      username: scott
+      password: tiger

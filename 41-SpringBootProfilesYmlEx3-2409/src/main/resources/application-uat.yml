@@ -1,0 +1,7 @@
+my:
+   app:
+      driver: sqlserver.jdbc
+      url: jdbc:sqlserver
+      username: system
+      password: manager
+         

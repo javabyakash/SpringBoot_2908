@@ -1,0 +1,7 @@
+my:
+   app:
+      driver: mysql.jdbc
+      url: jdbc:mysql
+      username: root
+      password: root
+         

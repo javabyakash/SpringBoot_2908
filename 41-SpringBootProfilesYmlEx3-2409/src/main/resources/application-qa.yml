@@ -1,0 +1,7 @@
+my:
+   app:
+      driver: pgsql.jdbc
+      url: jdbc:pgsql
+      username: admin
+      password: admin
+         
